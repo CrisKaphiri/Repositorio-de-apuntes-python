@@ -33,4 +33,4 @@ def mostrar_info(**informacion):
     print(informacion)
 
 
-mostrar_info(nombre="Nombre", edad=28, ciudad="Ciudad")
+mostrar_info(nombre="Nombre ingresado", edad=28, ciudad="Ciudad ingresada")
