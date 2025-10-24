@@ -25,7 +25,7 @@ print("La suma de todos los números es:", resultado_suma)
 
 
 # --------------------------------------------
-# 3. Funciones con **kwargs
+# 3. Funciones con **kwargs (diccionarios)
 # --------------------------------------------
 def mostrar_info(**informacion):
     for clave, valor in informacion.items():
