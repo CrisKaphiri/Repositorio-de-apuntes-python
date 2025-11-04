@@ -202,8 +202,9 @@ Permite acceder a valores dentro de una lista. Para la siguiente tabla usaremos 
 
 ##### 7.3 Slicing (cortar listas)
 
-Permite obtener sublistas, sin modificar la original. Para la siguiente tabla usaremos `[10, 20, 30, 40, 50, 60]`.
-La sintaxis de cortar listas es: `lista[inicio: fin: paso]` 
+Permite obtener sublistas, sin modificar la original. 
+La sintaxis de cortar listas es: `lista[inicio: fin: paso]`.
+Para la siguiente tabla usaremos `[10, 20, 30, 40, 50, 60]`.
 
 | Descripción        | Ejemplo         | Resultado                  |
 | ------------------ | --------------- | -------------------------- |
@@ -252,10 +253,104 @@ Para la siguiente tabla usaremos la `lista_1 = [1, 2]` y `lista_2 = [3, 4]`.
 
 ## 8. Diccionarios
 
+Un diccionario es una estructura no ordenada que almacena datos en pares `clave : valor`.
+Las claves deben ser únicas y normalmente son strings o números.
+
+##### 8.1 Crear diccionarios
+
+| Acción                | Ejemplo                         | Resultado             |
+| --------------------- | ------------------------------- | --------------------- |
+| Diccionario vacío     | `{}` — `dict()`                 | `{}`                  |
+| Con valores iniciales | `{"nombre": "Ana", "edad": 25}` | Diccionario con datos |
+| Acceder a un valor    | `personas["nombre"]`            | `"Ana"`               |
+
+##### 8.2 Modificar diccionarios
+
+| Tipo de operación    | Ejemplo                               | Resultado                   |
+| -------------------- | ------------------------------------- | --------------------------- |
+| Modificar valor      | `personas["edad"] = 26`               | Cambia el valor de la clave |
+| Agregar clave-valor  | `personas["profesion"] = "Ingeniera"` | Se añade al diccionario     |
+| Eliminar clave-valor | `del personas["ciudad"]`              | Remueve esa entrada         |
+
+##### 8.3 Métodos útiles
+
+| Método      | Acción                     | Ejemplo                | Resultado                  |
+| ----------- | -------------------------- | ---------------------- | -------------------------- |
+| `.keys()`   | Lista de claves            | `personas.keys()`      | dict_keys([...])           |
+| `.values()` | Lista de valores           | `personas.values()`    | dict_values([...])         |
+| `.items()`  | Claves y valores en tuplas | `personas.items()`     | dict_items([...])          |
+| `.get()`    | Obtener valor seguro       | `personas.get("edad")` | Devuelve el valor o `None` |
+| `.pop()`    | Eliminar y devolver valor  | `personas.pop("edad")` | Borra la clave `"edad"`    |
+
+##### 8.4 Iterar diccionarios
+
+| Iteración            | Ejemplo                                 | Resultado                |
+| -------------------- | --------------------------------------- | ------------------------ |
+| Recorrer claves      | `for clave in personas:`                | Muestra claves           |
+| Recorrer clave-valor | `for clave, valor in personas.items():` | Muestra claves y valores |
+
+> [!NOTE]
+> Para un ejemplo más detallado, revisar el archivo `08_diccionarios.ipynb`
+
 ## 9. Tuplas
+
+Las tuplas son muy similares a las listas: permiten almacenar múltiples elementos.
+La gran diferencia es que son inmutables, es decir, no se pueden modificar una vez creadas.
+
+> [!NOTE]
+> La inmutabilidad permite que las tuplas puedan usarse como claves en diccionarios y elementos de sets, cosa que no ocurre con las listas.
+
+| Característica               | Lista (`list`)    | Tupla (`tuple`)                           |
+| ---------------------------- | ----------------- | ----------------------------------------- |
+| Mutable                      | Sí                | No                                        |
+| Sintaxis                     | `[]`              | `()`                                      |
+| ¿Puede ser clave en un dict? | No                | Sí                                        |
+| Uso típico                   | Datos que cambian | Datos fijos, coordenadas, configuraciones |
+
+##### 9.1 ¿Para qué sirven?
+- Cuando necesitas asegurar que los datos no cambien
+- Para representar coordenadas o pares ordenados
+- Cuando requieres claves en diccionarios que representen combinaciones de datos
+- Para optimizar memoria (las tuplas son un poco más ligeras)
+
+
 
 ## 10. Sets
 
+Los sets son colecciones desordenadas de elementos únicos y mutables, pero solo pueden contener elementos inmutables (por ejemplo: números, strings, tuplas).
+
+##### 10.1 Crear un Set
+
+Al crear un set se debe especificar el contenido
+```
+variable = set(['foo', 'bar', 'baz', 'foo'])
+print(variable)  # {'foo', 'bar', 'baz'} -> 'foo' no se repite
+```
+También se puede usar llaves directamente:
+```
+set_1 = {1, 2, 3}
+```
+##### 10.2 Métodos comunes
+Para la siguiente tabla, usaremos los siguientes sets:
+```
+set_1 = {1, 2, 3, 4, 5, 6}
+set_2 = {4, 5, 6 ,7, 8, 9}
+```
+| Método                    | Ejemplo                             | Resultado                      |
+| ------------------------- | ----------------------------------- | ------------------------------ |
+| `.intersection()`         | `set_1.intersection(set_2)`         | `{4, 5, 6}`                    |
+| `.union()`                | `set_1.union(set_2)`                | `{1, 2, 3, 4, 5, 6, 7, 8, 9}`  |
+| `.difference()`           | `set_1.difference(set_2)`           | `{1, 2, 3}`                    |
+| `.symmetric_difference()` | `set_1.symmetric_difference(set_2)` | `{1, 2, 3, 7, 8, 9}`           |
+| `.add()`                  | `set_1.add(7)`                      | `{1, 2, 3, 4, 5, 6, 7}`        |
+
 ## Ejercicios resueltos
 
-## Próximos pasos
+En el archivo `00_Ejercicios.py` se encontrarán ejercicios resueltos sobre los temas 1 al 6.
+En el archivo `00_ejercicios.ipynb` se encontrarán ejercicios resueltos sobre los temas 7 al 10.
+
+## Siguiente paso: Python + Pandas para análisis de datos
+
+En el siguiente repositorio encontrarás apuntes sobre **pandas**, una librería esencial para manipular, transformar y limpiar datos.
+
+[Pandas para el análisis de datos - En proceso]()
