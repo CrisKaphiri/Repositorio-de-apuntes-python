@@ -349,8 +349,9 @@ set_2 = {4, 5, 6 ,7, 8, 9}
 En el archivo `00_Ejercicios.py` se encontrarán ejercicios resueltos sobre los temas 1 al 6.
 En el archivo `00_ejercicios.ipynb` se encontrarán ejercicios resueltos sobre los temas 7 al 10.
 
-## Siguiente paso: Python + Pandas para análisis de datos
+## Siguiente paso: Numpy y Pandas para análisis de datos
 
-En el siguiente repositorio encontrarás apuntes sobre **pandas**, una librería esencial para manipular, transformar y limpiar datos.
+Para continuar con los apuntes, se dejarán enlazados los siguientes repositorios referente a Numpy y Pandas sobre manipulación, transformación y limpieza datos.
 
+[Apuntes de NumPy](https://github.com/CrisKaphiri/Apuntes_de_Numpy)
 [Pandas para el análisis de datos - En proceso]()
