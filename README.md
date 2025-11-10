@@ -353,5 +353,5 @@ En el archivo `00_ejercicios.ipynb` se encontrarán ejercicios resueltos sobre l
 
 Para continuar con los apuntes, se dejarán enlazados los siguientes repositorios referente a Numpy y Pandas sobre manipulación, transformación y limpieza datos.
 
-[Apuntes de NumPy](https://github.com/CrisKaphiri/Apuntes_de_Numpy)
-[Pandas para el análisis de datos - En proceso]()
+- [Apuntes de NumPy](https://github.com/CrisKaphiri/Apuntes_de_Numpy)
+- [Pandas para el análisis de datos - En proceso]()
